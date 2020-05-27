@@ -1,0 +1,66 @@
+<div class="aaron-transit">
+  <div nz-row nzType="flex" nzJustify="center">
+    <div nz-col [nzSpan]="10">
+      <nz-card class="aaron-transit-card">
+        <nz-divider nzText="Metro"></nz-divider>
+        <button class="aaron-transit-button" nz-button [nzType]="'primary'" (click)="showMetroMap()">
+          <span>Shanghai Metro Map</span>
+        </button>
+        <br/>
+        <button class="aaron-transit-button" nz-button [nzType]="'primary'" (click)="showMetroPassengerFlow()">
+          <span>Shanghai Metro Realtime Passenger Flow</span>
+        </button>
+      </nz-card>
+    </div>
+    <div nz-col [nzSpan]="10">
+      <nz-card class="aaron-transit-card">
+        <nz-divider nzText="Flights"></nz-divider>
+        <button class="aaron-transit-button" nz-button [nzType]="'primary'" (click)="showPudongT1Map()">
+          <span>Shanghai Pudong International Airport Terminal 1</span>
+        </button>
+        <br/>
+        <button class="aaron-transit-button" nz-button [nzType]="'primary'" (click)="showPudongT2Map()">
+          <span>Shanghai Pudong International Airport Terminal 2</span>
+        </button>
+        <br/>
+        <button class="aaron-transit-button" nz-button [nzType]="'primary'" (click)="showHongqiaoT1Map()">
+          <span>Shanghai Hongqiao International Airport Terminal 1</span>
+        </button>
+        <br/>
+        <button class="aaron-transit-button" nz-button [nzType]="'primary'" (click)="showHongqiaoT2Map()">
+          <span>Shanghai Hongqiao International Airport Terminal 2</span>
+        </button>
+      </nz-card>
+    </div>
+  </div>
+</div>
+<nz-modal [(nzVisible)]="isMetroMapVisible" nzTitle="Shanghai Metro Map"
+          [nzFooter]="null" [nzCancelText]="null" [nzOkText]="null" nzWidth="1000"
+          (nzOnCancel)="closeMetroMap()">
+  <img src="../../assets/transit/metro.gif"  alt="Shanghai Metro" style="width: 950px;"/>
+</nz-modal>
+<nz-modal [(nzVisible)]="isMetroPassengerFlowVisible" nzTitle="Shanghai Metro Realtime Passenger Flow"
+          [nzFooter]="null" [nzCancelText]="null" [nzOkText]="null" nzWidth="1000"
+          (nzOnCancel)="closeMetroPassengerFlow()">
+  <iframe src="http://service.shmetro.com/klssxx/index.htm" style="height: 500px; width: 950px;"></iframe>
+</nz-modal>
+<nz-modal [(nzVisible)]="isPudongT1MapVisible" nzTitle="Shanghai Pudong International Airport Terminal 1 Map"
+          [nzFooter]="null" [nzCancelText]="null" [nzOkText]="null" nzWidth="1000"
+          (nzOnCancel)="closePudongT1Map()">
+  <img src="../../assets/transit/metro.gif"  alt="Shanghai Pudong International Airport Terminal 1" style="width: 950px;"/>
+</nz-modal>
+<nz-modal [(nzVisible)]="isPudongT2MapVisible" nzTitle="Shanghai Pudong International Airport Terminal 2 Map"
+          [nzFooter]="null" [nzCancelText]="null" [nzOkText]="null" nzWidth="1000"
+          (nzOnCancel)="closePudongT2Map()">
+  <img src="../../assets/transit/metro.gif"  alt="Shanghai Pudong International Airport Terminal 2" style="width: 950px;"/>
+</nz-modal>
+<nz-modal [(nzVisible)]="isHongqiaoT1MapVisible" nzTitle="Shanghai Hongqiao International Airport Terminal 1 Map"
+          [nzFooter]="null" [nzCancelText]="null" [nzOkText]="null" nzWidth="1000"
+          (nzOnCancel)="closeHongqiaoT1Map()">
+  <img src="../../assets/transit/metro.gif"  alt="Shanghai Hongqiao International Airport Terminal 1" style="width: 950px;"/>
+</nz-modal>
+<nz-modal [(nzVisible)]="isHongqiaoT2MapVisible" nzTitle="Shanghai Hongqiao International Airport Terminal 2 Map"
+          [nzFooter]="null" [nzCancelText]="null" [nzOkText]="null" nzWidth="1000"
+          (nzOnCancel)="closeHongqiaoT2Map()">
+  <img src="../../assets/transit/metro.gif"  alt="Shanghai Hongqiao International Airport Terminal 2" style="width: 950px;"/>
+</nz-modal>

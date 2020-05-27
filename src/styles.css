@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #2f3454;
+  background-image: url('assets/background.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.ant-menu {
+  background: rgba(255, 255, 255, 0.0);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ant-menu-horizontal {
+  border-style: none !important;
+}
+
+.ant-menu-item {
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected {
+  color: rgba(255, 255, 255, 1.0);
+  border-bottom: 2px solid rgba(255, 255, 255, 1.0) !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item > a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ant-menu-horizontal > .ant-menu-item > a:hover {
+  color: rgba(255, 255, 255, 1.0);
+}

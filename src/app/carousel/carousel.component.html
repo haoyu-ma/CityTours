@@ -1,0 +1,5 @@
+<nz-carousel nzAutoPlay nzEffect="fade" nzDotPosition="right">
+  <div nz-carousel-content *ngFor="let filename of filenames">
+    <img [src]="'../../assets/discover/' + filename">
+  </div>
+</nz-carousel>

@@ -1,0 +1,15 @@
+.aaron-transit {
+  width: 100%;
+  height: 500px;
+}
+
+.aaron-transit-card {
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.aaron-transit-button {
+  margin: 10px auto;
+}

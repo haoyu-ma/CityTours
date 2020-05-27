@@ -1,0 +1,25 @@
+<nz-card style="margin-bottom: 8px;" nzHoverable [nzBordered]="false" [nzCover]="coverTemplate" (click)="open()">
+  <nz-card-meta [nzTitle]="discoverCard.title" [nzDescription]="(discoverCard.description | slice:0:25) + '...'"></nz-card-meta>
+</nz-card>
+<ng-template #coverTemplate>
+  <img [alt]="discoverCard.title" [src]="'../../assets/discover/' + discoverCard.imageName" style="height: 180px"/>
+</ng-template>
+<nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="right"
+           [nzTitle]="discoverCard.title" [nzWidth]="800" (nzOnClose)="close()">
+  <div nz-row>
+    <div nz-col nzSpan="14" style="padding-right: 20px;">
+      <app-carousel [filenames]="discoverCard.carouselImages"></app-carousel>
+    </div>
+    <div nz-col nzSpan="10">
+      <p>{{ discoverCard.description }}</p>
+    </div>
+  </div>
+  <br/>
+  <nz-descriptions>
+    <nz-descriptions-item nzTitle="Open Hours">{{ discoverCard.openHours }}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Address">{{ discoverCard.address }}</nz-descriptions-item>
+  </nz-descriptions>
+  <hr/>
+  <br/>
+  <app-map [latitude]="discoverCard.latitude" [longitude]="discoverCard.longitude"></app-map>
+</nz-drawer>

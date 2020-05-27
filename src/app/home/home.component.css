@@ -1,0 +1,25 @@
+.aaron-home {
+  height: 100%;
+}
+
+.aaron-home-empty-div {
+  min-height: calc(100vh - 400px);
+}
+
+.aaron-typing-div {
+  height: 100%;
+}
+
+.aaron-typing {
+  width: 8ch;
+  margin: 0 auto;
+  overflow: hidden;
+  word-break: keep-all;
+  color: #ffffff;
+  font: bold 150px monospace;
+  animation: content-typing 3s 1 steps(8);
+}
+
+@keyframes content-typing {
+  from {width: 0;}
+}
